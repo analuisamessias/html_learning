@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formularios</title>
+  </head>
+  <body>
+    <h1>Formulários em HTML</h1>
+
+    <p>
+      Para criar um formulário em HTML, você deve usar a tag "form" para inserir
+      as informações e definir onde começa e onde termina o formulário
+    </p>
+
+    <h2>Campo de Input</h2>
+    <p>
+      Input: Para fazer um campo digitável no seu formulário, você deve usar a
+      tag "input" e inserir de qual tipo ela é com o "type"
+      <br />
+      Observe o exemplo abaixo. A caixa de texto abaixo aceita escritas do tipo
+      "texto".
+      <br />
+      <input type="text" />
+    </p>
+
+    <hr />
+
+    <h2>Campo Input com legenda e marca ao fundo</h2>
+    <p>
+      Você também pode adicionar legendas e marcas d'água aos campos de input
+      usando a tag "label" e "placeholder" dentro da tag input. Para a legenda com label, você deve estabelecer um "id" no seu input e um "for" no seu label com o mesmo nome, isso indica para qual input a legenda está relacionada.
+      <br />
+      Observe o exemplo abaixo. A caixa de texto abaixo aceita escritas do tipo
+      "texto" e possui uma legenda "Nome" e uma marca d'água "Digite seu nome".
+      <br />
+      <label for="campo_nome">Nome:</label>
+      <input id="campo_nome" type="text" placeholder="Digite seu nome" />
+    </p>
+
+    <hr />
+
+    <h2>Mini formulário para envio</h2>
+    <form>
+      <p>
+        Além to dipo texto, você também pode usar os tipos "Email" e "Password"
+        para criar um formulário. O campo de email só aceita se houver um
+        endereço com "@" e o tipo senha esconde o que está sendo digitado.
+        <br />
+        Vamos também adicionar um botão para envio do formulário, use o tipo
+        "submit" para isso e o value para dar nome ao botão.
+        <br />
+        Observe o exemplo de formulário abaixo com um campo de nome de usuário,
+        email e senha.
+        <br />
+        <br />
+        <!--LEGENDA E INPUT DO USUÁRIO-->
+        <label for="campo_usuario">Usuário:</label>
+        <input
+          id="campo_usuario"
+          type="text"
+          placeholder="Digite seu usuário"
+          required
+        />
+        <br />
+        <br />
+        <!--LEGENDA E INPUT DO E-MAIL-->
+        <label for="campo_email">E-mail:</label>
+        <input
+          id="campo_email"
+          type="email"
+          placeholder="Digite seu e-mail"
+          required
+        />
+        <br />
+        <br />
+        <!--LEGENDA E INPUT DA SENHA-->
+        <label for="campo_senha">Senha:</label>
+        <input
+          id="campo_senha"
+          type="password"
+          placeholder="Digite sua senha"
+          required
+        />
+        <br />
+        <br />
+        <!--BOTÃO DE ENVIAR-->
+        <input type="submit" value="Enviar" />
+
+        <br />
+        <br />
+        Você ainda pode adicionar um campo "required" para que o campo seja
+        obrigatório. Tente enviar o formulario vazio para ver que ele solicita
+        uma inserção!
+      </p>
+    </form>
+
+    <hr>
+    <h2>Campos de seleção no formulário em HTML</h2>
+    <p>
+        Você pode adicionar campos de seleção usando as tags do tipo "radio" e "checkbox". O campo radio permite que você selecione apenas uma opção, enquanto o campo checkbox permite que você selecione várias opções.
+        <br>
+        <br>
+        Observe o exemplo abaixo com seleção usando "radio". Estabeleça um id, um nome, um valor e um label para cada opção. O id define aquele determinado input. O "name" define de qual parte as seleções são. Para que seja selecionado somente uma entre elas. E o "Value" define o valor daquela opção.
+        <br>
+        <br>
+        <form>
+            <b>Selecione seu Curso</b>
+            <br>
+            <!--SELEÇÃO DE UM SÓ CURSO-->
+            <input type="radio" id="cc" name="curso" value="Ciencia da Computacao">
+            <label for="cc">Ciência da Computação</label>
+            <br>
+            <br>
+            <input type="radio" id="si" name="curso" value="Sistemas de Informacao">
+            <label for="si">Sistemas de Informação</label>
+            <br>
+            <br>
+            <input type="radio" id="cd" name="curso" value="Ciencia de Dados">
+            <label for="cd">Ciência de Dados</label>
+            <br>
+            <br>
+            <input type="radio" id="es" name="curso" value="Engenharia de Software">
+            <label for="es">Engenharia de Software</label>
+            <br>
+            <br>
+            <input type="radio" id="mc" name="curso" value="Matematica Computacional">
+            <label for="mc">Matemática Computacional</label>
+        <br>
+        <br>
+        Observe agora usando o "checkbox". Neste caso, você pode selecionar mais de um. Deve definir um id, um nome, um valor e uma legenda para ele. Cda um tem um nome e id diferente, apenas o tipo é igual
+        <br>
+        <br>
+        <b>Quais disciplinas você já cursou?</b>
+        <br> <br>
+        <!--SELEÇÃO DE VÁRIAS DISCIPLINAS-->
+        <input type="checkbox" id="pds1" name="pds1" value="PDS1">
+        <label for="pds1">Programação e Desenvolvimento de Software 1</label>
+
+        <br> <br>
+
+        <input type="checkbox" id="pds2" name="pds2" value="PDS2">
+        <label for="pds2">Programação e Desenvolvimento de Software 2</label>
+
+        <br> <br>
+
+        <input type="checkbox" id="ed" name="ed" value="ED">
+        <label for="ed">Estrutura de Dados</label>
+
+        <br> <br>
+
+        <input type="checkbox" id="alg1" name="alg1" value="ALG1">
+        <label for="alg1">Algoritmos 1</label>
+
+        <br> <br>
+
+        <!--BOTÃO DE ENVIAR-->
+        <input type="submit" value="Enviar" />
+    </form>
+    </p>
+
+    <hr>
+
+    <h2>Select em HTML</h2>
+    <p>
+        Select é uma caixa de seleção onde você pode ter várias opções para escolher. Para criar um select, você deve usar a tag "select" e dentro dela, usar a tag "option" para cada opção que você deseja adicionar.
+        <br>
+        Observe o exemplo abaixo: (Lembrando o que vai ser enviado no formulário é o "value" e o que vai ser exibido é o que está entre as tags "option"). E para adicionar um campo desabilitado para selecionar, você deve adicionar o atributo "disabled" na tag "option".
+        <br> <br>
+        <b>Selecione uma cor</b>
+        <br/> <br>
+        <select name="cores">
+            <option value="select" selected disabled>Selecione uma cor</option>
+            <option value="azul">Azul</option>
+            <option value="vermelho">Vermelho</option>
+            <option value="verde">Verde</option>
+            <option value="amarelo">Amarelo</option>
+            <option value="roxo">Roxo</option>
+        </select>
+    </p>
+
+    <hr>
+
+    <h2>Textarea em HTML</h2>
+    <p>
+        Textarea é um campo de texto maior que o input, onde você pode escrever mais informações. Para criar um textarea, você deve usar a tag "textarea" e definir o número de linhas e colunas que você deseja que o campo tenha.
+        <br>
+        Observe o exemplo abaixo:
+        <br> <br>
+        <b>Deixe seu comentário</b>
+        <br> <br>
+        <textarea name="comentario" rows="4" cols="50" placeholder="Digite seu comentário"></textarea>
+    </p>
+
+    <hr>
+
+    <h2>Botões simples</h2>
+    <p>
+        Botões: Você também pode criar botões simples em HTML usando a tag "button" e apenas definir o tipo dele com "type".
+        <br>
+        Observe o exemplo abaixo:
+        <br> <br/>
+        <button>Clique aqui para prosseguir</button>
+    </p>
+
+
+    <a href="index.html">Voltar para página principal</a>
+  </body>
+</html>
