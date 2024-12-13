@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video</title>
+  </head>
+  <body>
+    <h1>Vídeos em HTML</h1>
+
+    <p>
+      Vídeos: Para inserir um vídeo na sua página, você deve usar a tag "video"
+      e indicar o caminho o qual o vídeo está localizado.
+      <br />
+      Para formatar o seu vídeo, você pode alterar o tamanho que ele sserá
+      exibido, os controles para acessar o vídeo, se é possível baixar ou não
+      (controlsList="nodownload") e o tipo do vídeo (mp4, ogg, webm),
+      desabilitar o picture in picture (disablepictureinpicture) e o fullscreen
+      (disablefullscreen). E podde também adicionar um poster de imagem com o
+      "poster".
+      <br />
+      <br />
+      Observe o exemplo abaixo:
+      <br />
+      <b>Assista o vídeo do trabalho</b>
+      <br />
+      <br />
+      <video
+        poster="imagens/tipos-iphone14.jpeg"
+        width="80%"
+        controls
+        disablepictureinpicture
+        controlsList="nodownload nofullscreen"
+      >
+        <source src="video/OTR - Parte 2.mkv" type="mp4" />
+      </video>
+    </p>
+
+    <a href="index.html">Voltar ao início</a>
+  </body>
+</html>
